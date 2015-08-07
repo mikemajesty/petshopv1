@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFECB84E-003D-456D-BA7E-95E2F4E060C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>View.Enum</RootNamespace>
+    <AssemblyName>View</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Mike.Utilities.Desktop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Mike.Utilities.Desktop\Mike.Utilities.Desktop\bin\Debug\Mike.Utilities.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\EnumMovimentacao.cs" />
+    <Compile Include="Enum\EnumTipoCreditar.cs" />
+    <Compile Include="Enum\EnumTipoOperacao.cs" />
+    <Compile Include="Enum\EnumTipoOperacaoCaixa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Relatorios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Caixa\frmAdicionarCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Caixa\frmAdicionarCaixa.Designer.cs">
+      <DependentUpon>frmAdicionarCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Caixa\frmCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Caixa\frmCaixa.Designer.cs">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Caixa\frmDividirComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Caixa\frmDividirComanda.Designer.cs">
+      <DependentUpon>frmDividirComanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Caixa\frmMovimentacaoCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Caixa\frmMovimentacaoCaixa.Designer.cs">
+      <DependentUpon>frmMovimentacaoCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Caixa\frmMovimentacaoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Caixa\frmMovimentacaoVenda.Designer.cs">
+      <DependentUpon>frmMovimentacaoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Caixa\frmReceberFiado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Caixa\frmReceberFiado.Designer.cs">
+      <DependentUpon>frmReceberFiado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cetegoria\frmCadastrarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cetegoria\frmCadastrarCategoria.Designer.cs">
+      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cetegoria\frmGerenciarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cetegoria\frmGerenciarCategoria.Designer.cs">
+      <DependentUpon>frmGerenciarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cliente\frmClienteCreditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cliente\frmClienteCreditar.Designer.cs">
+      <DependentUpon>frmClienteCreditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cliente\frmCadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cliente\frmCadastrarCliente.Designer.cs">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cliente\frmGerenciarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cliente\frmGerenciarCliente.Designer.cs">
+      <DependentUpon>frmGerenciarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Comanda\frmCadastrarComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Comanda\frmCadastrarComanda.Designer.cs">
+      <DependentUpon>frmCadastrarComanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Comanda\frmGerenciarComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Comanda\frmGerenciarComanda.Designer.cs">
+      <DependentUpon>frmGerenciarComanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Estoque\frmGerenciarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Estoque\frmGerenciarEstoque.Designer.cs">
+      <DependentUpon>frmGerenciarEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Estoque\frmMensagemEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Estoque\frmMensagemEstoque.Designer.cs">
+      <DependentUpon>frmMensagemEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\KeyGen\frmKeyGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\KeyGen\frmKeyGen.Designer.cs">
+      <DependentUpon>frmKeyGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\frmCadastrarLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login\frmCadastrarLogin.Designer.cs">
+      <DependentUpon>frmCadastrarLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\frmGerenciarLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login\frmGerenciarLogin.Designer.cs">
+      <DependentUpon>frmGerenciarLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Produto\frmCadastrarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Produto\frmCadastrarProduto.Designer.cs">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Produto\frmGerenciarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Produto\frmGerenciarProduto.Designer.cs">
+      <DependentUpon>frmGerenciarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Produto\frmMovimentacaoProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Produto\frmMovimentacaoProdutos.Designer.cs">
+      <DependentUpon>frmMovimentacaoProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Produto\frmPesquisarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Produto\frmPesquisarProduto.Designer.cs">
+      <DependentUpon>frmPesquisarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Relatorio\frmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Relatorio\frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Caixa\frmAdicionarCaixa.resx">
+      <DependentUpon>frmAdicionarCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Caixa\frmCaixa.resx">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Caixa\frmDividirComanda.resx">
+      <DependentUpon>frmDividirComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Caixa\frmMovimentacaoCaixa.resx">
+      <DependentUpon>frmMovimentacaoCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Caixa\frmMovimentacaoVenda.resx">
+      <DependentUpon>frmMovimentacaoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Caixa\frmReceberFiado.resx">
+      <DependentUpon>frmReceberFiado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cetegoria\frmCadastrarCategoria.resx">
+      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cetegoria\frmGerenciarCategoria.resx">
+      <DependentUpon>frmGerenciarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cliente\frmClienteCreditar.resx">
+      <DependentUpon>frmClienteCreditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cliente\frmCadastrarCliente.resx">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cliente\frmGerenciarCliente.resx">
+      <DependentUpon>frmGerenciarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Comanda\frmCadastrarComanda.resx">
+      <DependentUpon>frmCadastrarComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Comanda\frmGerenciarComanda.resx">
+      <DependentUpon>frmGerenciarComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Estoque\frmGerenciarEstoque.resx">
+      <DependentUpon>frmGerenciarEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Estoque\frmMensagemEstoque.resx">
+      <DependentUpon>frmMensagemEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\KeyGen\frmKeyGen.resx">
+      <DependentUpon>frmKeyGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login\frmCadastrarLogin.resx">
+      <DependentUpon>frmCadastrarLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login\frmGerenciarLogin.resx">
+      <DependentUpon>frmGerenciarLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Produto\frmCadastrarProduto.resx">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Produto\frmGerenciarProduto.resx">
+      <DependentUpon>frmGerenciarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Produto\frmMovimentacaoProdutos.resx">
+      <DependentUpon>frmMovimentacaoProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Produto\frmPesquisarProduto.resx">
+      <DependentUpon>frmPesquisarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Relatorio\frmCompras.resx">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Relatorio\rpvCompras.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Relatorios.xsc">
+      <DependentUpon>Relatorios.xsd</DependentUpon>
+    </None>
+    <None Include="Relatorios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Relatorios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Relatorios.xss">
+      <DependentUpon>Relatorios.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{727ab26b-02d4-4ba8-92c5-9b6b22cad5e2}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{9f160a56-aad6-43b9-9c37-4eb2b033afce}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Source\Imagem\Caixa\fecharcaixa.png" />
+    <Content Include="Source\Imagem\Caixa\1417909102_bar-code.png" />
+    <Content Include="Source\Imagem\Caixa\1435174906_barcode.ico" />
+    <Content Include="Source\Imagem\Caixa\1435176003_Numbers-24.ico" />
+    <Content Include="Source\Imagem\Caixa\add.ico" />
+    <Content Include="Source\Imagem\Caixa\balanca.ico" />
+    <Content Include="Source\Imagem\Caixa\minus.ico" />
+    <Content Include="Source\Imagem\Caixa\weight_kilogram.ico" />
+    <Content Include="Source\Imagem\Cliente\add1.png" />
+    <Content Include="Source\Imagem\Estoque\1438284258_loading.png" />
+    <Content Include="Source\Imagem\Estoque\codigodebarras.ico" />
+    <Content Include="Source\Imagem\Estoque\lapis.ico" />
+    <Content Include="Source\Imagem\Global\breads.ico" />
+    <Content Include="Source\Imagem\Menu\bkgCaixa.jpg" />
+    <Content Include="Source\Imagem\Global\Crud\save.ico" />
+    <Content Include="Source\Imagem\Global\Crud\update.ico" />
+    <Content Include="Source\Imagem\Global\Crud\delete.ico" />
+    <Content Include="Source\Imagem\Global\Crud\exit.ico" />
+    <Content Include="Source\Imagem\Global\Crud\new.ico" />
+    <Content Include="Source\Imagem\Global\aguarde.ico" />
+    <Content Include="Source\Imagem\Menu\1434757321_login.ico" />
+    <Content Include="Source\Imagem\Menu\1434757361_User.ico" />
+    <Content Include="Source\Imagem\Menu\1434757402_bar-code.ico" />
+    <Content Include="Source\Imagem\Menu\1434757498_category.ico" />
+    <Content Include="Source\Imagem\Menu\1434757604_file-roller.ico" />
+    <Content Include="Source\Imagem\Menu\1434757648_Client_Male_Dark.ico" />
+    <Content Include="Source\Imagem\Menu\1434757733_Warehouse_icon_3D_rev.ico" />
+    <Content Include="Source\Imagem\Menu\1434757838_cash_register.ico" />
+    <Content Include="Source\Imagem\Menu\1434757869_application-vnd.ms-excel.ico" />
+    <Content Include="Source\Imagem\Menu\1434757892_xfce-system-exit.ico" />
+    <Content Include="Source\Imagem\Caixa\caixa.ico" />
+    <Content Include="Source\Imagem\Caixa\document_save.png" />
+    <Content Include="Source\Imagem\Caixa\money %282%29.png" />
+    <Content Include="Source\Imagem\Caixa\Troco.png" />
+    <Content Include="Source\Imagem\Menu\padariaPapelDeParede.jpg" />
+    <Content Include="Source\Imagem\Menu\report.ico" />
+    <Content Include="Source\Imagem\Produto\Percent.ico" />
+    <Content Include="Source\Imagem\Produto\money.ico" />
+    <Content Include="Source\Imagem\Produto\estoque.ico" />
+    <Content Include="Source\Imagem\Produto\add1.png" />
+    <Content Include="Source\Imagem\Login\1417552464_Login Manager.png" />
+    <Content Include="Source\Imagem\Produto\categoria.ico" />
+    <Content Include="Source\Imagem\Produto\codigodebarras.ico" />
+    <Content Include="Source\Imagem\Produto\lapis.ico" />
+    <Content Include="Source\Imagem\Relatorio\comprar.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
